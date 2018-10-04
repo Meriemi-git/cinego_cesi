@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 10 janv. 2016 20:04:39 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="cineGOv02.model.entity.Siege" table="SIEGE">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="numeroPlace" type="int">
+            <column name="NUMEROPLACE" />
+        </property>
+        <property name="handicap" type="boolean">
+            <column name="HANDICAP" />
+        </property>
+        <property name="libre" type="boolean">
+            <column name="LIBRE" />
+        </property>
+        <property name="x" type="int">
+            <column name="X" />
+        </property>
+        <property name="y" type="int">
+            <column name="Y" />
+        </property>
+    </class>
+</hibernate-mapping>

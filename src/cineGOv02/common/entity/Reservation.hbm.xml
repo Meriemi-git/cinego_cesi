@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 8 f?vr. 2016 15:56:00 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="cineGOv02.common.entity.Reservation" table="RESERVATION">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="prix" type="double">
+            <column name="PRIX" />
+        </property>
+        <one-to-one name="client" class="cineGOv02.common.entity.User"></one-to-one>
+        <property name="listeSiege" type="java.lang.String">
+            <column name="LISTESIEGE" />
+        </property>
+        <one-to-one name="seance" class="cineGOv02.common.entity.Seance"></one-to-one>
+        <property name="nbPlace" type="int">
+            <column name="NBPLACE" />
+        </property>
+        <property name="dateResa" type="java.sql.Timestamp">
+            <column name="DATERESA" />
+        </property>
+    </class>
+</hibernate-mapping>

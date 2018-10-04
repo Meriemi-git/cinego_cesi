@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 5 mars 2016 18:43:07 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="cineGOv02.common.entity.Salle" table="SALLE">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="numeroDeSalle" type="int">
+            <column name="NUMERODESALLE" />
+        </property>
+        <property name="nbRangees" type="int">
+            <column name="NBRANGEES" />
+        </property>
+        <property name="nbSieges" type="int">
+            <column name="NBSIEGES" />
+        </property>
+        <property name="placesDisponibles" type="int">
+            <column name="PLACESDISPONIBLES" />
+        </property>
+        <one-to-one name="cinema" class="cineGOv02.common.entity.Cinema"></one-to-one>
+        <property name="planDeSalle" type="java.lang.String">
+            <column name="PLANDESALLE" />
+        </property>
+    </class>
+</hibernate-mapping>

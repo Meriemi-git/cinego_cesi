@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+ <session-factory >
+  <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+  <property name="hibernate.connection.password"/>
+  <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/cinego</property>
+  <property name="hibernate.connection.username">root</property>
+  <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+  <property name="hibernate.show_sql">false</property>
+  <property name="hibernate.transaction.auto_close_session">false</property>
+  <property name="hibernate.c3p0.acquire_increment">1</property>
+  <property name="hibernate.c3p0.idle_test_period">100</property>
+  <property name="hibernate.c3p0.max_size">200</property>
+  <property name="hibernate.c3p0.max_statements">10</property>
+  <property name="hibernate.c3p0.min_size">10</property>
+  <property name="hibernate.use_sql_comments">false</property>
+  <property name="hibernate.connection.autocommit">true</property>
+  <property name="hibernate.default_entity_mode">pojo</property>
+  <property name="hibernate.c3p0.timeout">3</property>
+  <property name="hibernate.hbm2ddl.auto">update</property>
+  <!--  <property name="connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>-->
+  <mapping class="cineGOv02.common.entity.Cinema" resource="cineGOv02/common/entity/Cinema.hbm.xml"/>
+  <mapping class="cineGOv02.common.entity.Salle" resource="cineGOv02/common/entity/Salle.hbm.xml"/>
+  <mapping class="cineGOv02.common.entity.Film" resource="cineGOv02/common/entity/Film.hbm.xml"/>
+  <mapping class="cineGOv02.common.entity.Reservation" resource="cineGOv02/common/entity/Reservation.hbm.xml"/>
+  <mapping class="cineGOv02.common.entity.Seance" resource="cineGOv02/common/entity/Seance.hbm.xml"/>
+  <mapping class="cineGOv02.common.entity.Siege" resource="cineGOv02/common/entity/Siege.hbm.xml"/>
+  <mapping class="cineGOv02.common.entity.User" resource="cineGOv02/common/entity/User.hbm.xml"/>
+ </session-factory>
+</hibernate-configuration>

@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 8 f?vr. 2016 15:56:00 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="cineGOv02.common.entity.Seance" table="SEANCE">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <one-to-one name="salle" class="cineGOv02.common.entity.Salle"></one-to-one>
+        <one-to-one name="film" class="cineGOv02.common.entity.Film"></one-to-one>
+        <property name="debut" type="java.sql.Timestamp">
+            <column name="DEBUT" />
+        </property>
+        <property name="fin" type="java.sql.Timestamp">
+            <column name="FIN" />
+        </property>
+        <property name="VF3D" type="boolean">
+            <column name="VF3D" />
+        </property>
+        <property name="VOST3D" type="boolean">
+            <column name="VOST3D" />
+        </property>
+        <property name="VF" type="boolean">
+            <column name="VF" />
+        </property>
+        <property name="VOST" type="boolean">
+            <column name="VOST" />
+        </property>
+        <property name="VO" type="boolean">
+            <column name="VO" />
+        </property>
+        <property name="listeSiege" type="java.lang.String">
+            <column name="LISTESIEGE" />
+        </property>
+        <property name="nbPlacesLibres" type="int">
+            <column name="NBPLACESLIBRES" />
+        </property>
+    </class>
+</hibernate-mapping>

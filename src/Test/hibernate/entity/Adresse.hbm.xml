@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 9 d?c. 2015 00:34:08 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="Test.hibernate.entity.Adresse" table="ADRESSE">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="street" type="java.lang.String">
+            <column name="STREET" />
+        </property>
+        <property name="postalCode" type="int">
+            <column name="POSTALCODE" />
+        </property>
+        <property name="city" type="java.lang.String">
+            <column name="CITY" />
+        </property>
+    </class>
+</hibernate-mapping>

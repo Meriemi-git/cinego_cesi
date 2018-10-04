@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 5 mars 2016 18:43:07 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="cineGOv02.common.entity.Cinema" table="CINEMA">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="nom" type="java.lang.String">
+            <column name="NOM" />
+        </property>
+        <property name="tarifNormal" type="double">
+            <column name="TARIFNORMAL" />
+        </property>
+        <property name="tarif3D" type="double">
+            <column name="TARIF3D" />
+        </property>
+        <property name="reductionEtudiant" type="double">
+            <column name="REDUCTIONETUDIANT" />
+        </property>
+    </class>
+</hibernate-mapping>
